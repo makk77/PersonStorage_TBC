@@ -15,9 +15,9 @@ public static class MigrationExtensions
             {
                 //Auto Migration
 
-                //var context = serviceScope.ServiceProvider.GetService<PersonDbContext>();
-                //context.Database.Migrate();
-                //context.SaveChanges();
+                var context = serviceScope.ServiceProvider.GetService<PersonDbContext>();
+                context.Database.Migrate();
+                context.SaveChanges();
             }
             catch (Exception ex)
             {
